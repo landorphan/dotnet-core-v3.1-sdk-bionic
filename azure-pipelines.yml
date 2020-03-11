@@ -29,6 +29,6 @@ stages:
       displayName: Push to (Landorphan) Azure Container Regsitry
       inputs:
         containerRegistry: 'LandorphanDocker'
-        repository: 'landorphan/dotnet/core/sdk'
+        repository: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk'
         command: 'push'
         tags: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:3.1-bionic'
