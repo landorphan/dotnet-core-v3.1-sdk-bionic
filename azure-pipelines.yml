@@ -24,8 +24,8 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'DockerHub'
-        repository: 'landorphan/dotnet/core/sdk'
+        repository: 'landorphan'
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          3.1-bionic
+          landorphan/dotnet/core/sdk/3.1-bionic
