@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'LandorphanDocker'
+        containerRegistry: 'DockerHub'
         repository: 'landorphan/dotnet/core/sdk'
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
