@@ -26,10 +26,10 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:3.1-bionic
-    # - task: Docker@2
-    #   inputs:
-    #     containerRegistry: 'LandorphanDocker'
-    #     repository: 'landorphan/dotnet/core/sdk'
-    #     command: 'push'
-    #     tags: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:3.1-bionic'
+          landorphan/dotnet/core/sdk:3.1-bionic
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'LandorphanDocker'
+        repository: 'landorphan/dotnet/core/sdk'
+        command: 'push'
+        tags: 'landorphan/dotnet/core/sdk:3.1-bionic'
