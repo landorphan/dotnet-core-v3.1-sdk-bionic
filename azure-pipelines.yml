@@ -22,8 +22,8 @@ stages:
     steps:
     - bash: |
         docker build . \
-          -t landorphan/dotnet/core/sdk:3.1-bionic \
           -t landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:3.1-bionic
+          # -t landorphan/dotnet/core/sdk:3.1-bionic \
       displayName: Build Docker Image
     - task: Docker@2
       displayName: Push to (Landorphan) Azure Container Regsitry
