@@ -31,4 +31,4 @@ stages:
         containerRegistry: 'LandorphanDocker'
         repository: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk'
         command: 'push'
-        tags: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:3.1-bionic'
+        tags: 3.1-bionic
