@@ -21,7 +21,7 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - bash: |
-        docker build . -t landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:latest
+        docker build . -t landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk:latest -t landorphan/dotnet/core/sdk:latest
       displayName: Build Docker Image
     - task: Docker@2
       displayName: Push to Azure Registry
