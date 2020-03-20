@@ -29,6 +29,6 @@ stages:
       displayName: Push to Container Registry
       inputs:
         containerRegistry: 'LandorphanDocker'
-        repository: 'lndfrickmark.azurecr.io/landorphan/dotnet/core/sdk'
+        repository: 'landorphan/dotnet/core/sdk'
         command: 'push'
         tags: '$(Build.BuildId)'
