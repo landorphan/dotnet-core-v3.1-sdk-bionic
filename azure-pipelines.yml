@@ -1,5 +1,5 @@
 # Docker
-# Build a Docker image 
+# Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
@@ -14,7 +14,7 @@ variables:
 stages:
 - stage: Build
   displayName: Build image
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
@@ -26,9 +26,9 @@ stages:
           # -t landorphan/dotnet/core/sdk:3.1-bionic \
       displayName: Build Docker Image
     - task: Docker@2
-      displayName: Push to (Landorphan) Azure Container Regsitry
+      displayName: Push to Container Registry
       inputs:
         containerRegistry: 'LandorphanDocker'
-        repository: 'landorphancontainers.azurecr.io/landorphan/dotnet/core/sdk'
+        repository: 'lndfrickmark.azurecr.io/landorphan/dotnet/core/sdk'
         command: 'push'
-        tags: 3.1-bionic
+        tags: '$(Build.BuildId)'
